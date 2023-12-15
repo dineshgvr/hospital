@@ -1,0 +1,17 @@
+@for (item of pendingOrders; track $index) {
+<div>
+  <mat-card>
+    <mat-card-header [ngClass]="{ 'orange_alert': item?.trigger_type?.toLowerCase() === 'code_blue' ? 'orange_alert' : '', 'pink_alert': item?.trigger_type?.toLowerCase() === 'emergency' ? 'pink_alert' : '', 
+    'yellow_alert': item?.trigger_type?.toLowerCase() === 'call' ? 'yellow_alert' : ''}" class="card_header">{{item?.call_received_time | date: 'dd-MM-yyyy hh:mm:ss'}}</mat-card-header>
+    <mat-card-content style="padding-bottom: 16px; height: 4rem; padding: 12px">
+      <div style="display: flex">
+        <div style="font-size: 40px; padding: 12px; border-right: 1px solid grey"> {{ item?.unit_type | titlecase }} </div>
+        <div style="font-size: 40px; padding: 12px">{{ item?.room_number }}</div>
+        <div style="font-size: 40px; padding: 12px; margin-left: auto">
+            <button mat-raised-button color="primary">Ackowledge</button>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+}

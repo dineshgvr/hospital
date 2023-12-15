@@ -1,0 +1,43 @@
+::ng-deep .mat-mdc-card {
+    position: relative !important;
+    margin: 24px !important;
+    box-shadow: 5px 4px 2px grey !important;
+    border: 1px solid black !important;
+}
+
+.card_header {
+    padding: 10px;
+    border: 0.5px solid gray;
+}
+
+.orange_alert {
+    animation: blinkingBackgroundOrange 2s infinite;
+}
+
+@keyframes blinkingBackgroundOrange { 
+    0% {background-color: white;}
+    100% {background-color: orange;}
+}
+
+.yellow_alert {
+    animation: blinkingBackgroundYellow 2s infinite;
+}
+
+@keyframes blinkingBackgroundYellow { 
+    0% {background-color: white;}
+    100% {background-color: yellow;}
+}
+
+
+.pink_alert {
+    animation: blinkingBackgroundPink 2s infinite;
+}
+
+@keyframes blinkingBackgroundPink { 
+    0% {background-color: white;}
+    100% {background-color: pink;}
+}
+
+::ng-deep .card_icon {
+    transform: scale(2) !important;
+}

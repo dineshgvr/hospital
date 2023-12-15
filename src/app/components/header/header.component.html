@@ -1,0 +1,13 @@
+<div style="z-index: 10; width: 100vw;">
+    <mat-toolbar style="display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px; height: 50px">
+        <mat-icon matTooltip="Home" routerLink="home" routerLinkActive="icon-active"
+            [routerLinkActiveOptions]="{ exact: true }" class="icon">home</mat-icon>
+        <mat-icon matTooltip="Alarm" routerLink="alarm" routerLinkActive="icon-active" class="icon">alarm</mat-icon>
+        <mat-icon matTooltip="Event" routerLink="event" routerLinkActive="icon-active" class="icon">event</mat-icon>
+        <mat-icon matTooltip="Settings" routerLink="settings" routerLinkActive="icon-active"
+            class="icon">settings</mat-icon>
+    </mat-toolbar>
+</div>
